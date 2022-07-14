@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+
+import { NavBar } from './NavBar/NavBar';
+import { StickyNavBar } from './NavBar/StickyNavBar';
 
 function App() {
+  const [darkMood, setDarkMood] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={darkMood ? 'dark relative' : 'relative'}>
+      <NavBar darkMood={darkMood} setDarkMood={setDarkMood} />
+      <StickyNavBar darkMood={darkMood} />
+      <div className='bg-[#0a0c10] dark:bg-[#0a0c10] h-screen'>
+        <h1 className='text-white dark:text-white'>The Beginning</h1>
+      </div>
     </div>
   );
 }
