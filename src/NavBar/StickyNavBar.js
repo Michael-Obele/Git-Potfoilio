@@ -8,7 +8,7 @@ export function StickyNavBar({ darkMood }) {
     <>
       <div className='sticky top-0 bg-white dark:bg-[#0a0c10] px-2 sm:px-4 pt-5 border dark:border-t-0 dark:border-x-0 border-t-black dark:border-b-white'>
         <div className='container flex justify-between flex-wrap items-center  mx-auto'>
-          <div className='flex ml-14 space-x-4'>
+          <div className='flex ml-[10rem] space-x-4'>
             <a href='#' className='flex items-center'>
               <img className='mr-3 h-6 sm:h-9' alt='My Image' />
               <span className='self-center text-xl font-bold whitespace-nowrap dark:text-white'>
